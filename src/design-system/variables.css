@@ -1,0 +1,45 @@
+/**
+ * Fichier : variables.css
+ * SOCLE COMMUN — Design system partagé.
+ * Définit les variables CSS (couleurs, espacements, polices) pour tout le frontend.
+ * À FAIRE (tous FE) : adapter les couleurs au thème EMIT.
+ */
+
+:root {
+  /* Couleurs principales */
+  --couleur-primaire: #1a56db;
+  --couleur-secondaire: #6b7280;
+  --couleur-succes: #059669;
+  --couleur-erreur: #dc2626;
+  --couleur-avertissement: #d97706;
+  --couleur-info: #2563eb;
+
+  /* Couleurs de fond */
+  --couleur-fond: #f9fafb;
+  --couleur-fond-blanc: #ffffff;
+  --couleur-fond-gris: #f3f4f6;
+
+  /* Couleurs de texte */
+  --couleur-texte: #111827;
+  --couleur-texte-secondaire: #6b7280;
+  --couleur-texte-blanc: #ffffff;
+
+  /* Espacements */
+  --espace-xs: 0.25rem;
+  --espace-sm: 0.5rem;
+  --espace-md: 1rem;
+  --espace-lg: 1.5rem;
+  --espace-xl: 2rem;
+
+  /* Bordures */
+  --rayon-bordure: 0.375rem;
+  --bordure: 1px solid #e5e7eb;
+
+  /* Polices */
+  --police-principale: 'Inter', system-ui, -apple-system, sans-serif;
+  --police-taille-sm: 0.875rem;
+  --police-taille-base: 1rem;
+  --police-taille-lg: 1.125rem;
+  --police-taille-xl: 1.25rem;
+  --police-taille-2xl: 1.5rem;
+}

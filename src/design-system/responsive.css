@@ -1,0 +1,152 @@
+/* Règles responsive — SOCLE COMMUN
+   Complète variables.css : les composants utilisent des classes ici plutôt
+   que des styles inline pour permettre les media queries. */
+
+/* --- Page de connexion étudiant (panneau + formulaire) --- */
+.emit-connexion-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espace-lg);
+}
+
+.emit-connexion-conteneur {
+  display: flex;
+  max-width: 920px;
+  width: 100%;
+  border-radius: var(--rayon-carte);
+  overflow: hidden;
+  box-shadow: var(--ombre-carte-hover);
+}
+
+.emit-connexion-panneau,
+.emit-connexion-formulaire {
+  flex: 1;
+  padding: var(--espace-xl);
+}
+
+/* --- En-tête des pages internes (profil, etc.) --- */
+.emit-entete {
+  background: var(--degrade-bandeau);
+  padding: 20px var(--espace-xl);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.emit-contenu-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--espace-xl) var(--espace-lg);
+}
+
+/* --- Grille d'informations (profil étudiant) --- */
+.emit-grille-infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+}
+
+/* --- Formulaires de référentiel (mentions, parcours, années) --- */
+.emit-formulaire-referentiel {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.emit-formulaire-referentiel > * {
+  flex: 1 1 180px;
+  min-width: 160px;
+}
+
+.emit-formulaire-referentiel .emit-bouton-ajouter {
+  flex: 0 0 auto;
+  margin-top: 22px;
+}
+
+/* --- Tableaux : défilement horizontal déjà géré par Tableau.jsx --- */
+
+/* =========================================================
+   TABLETTE — largeur <= 820px
+   ========================================================= */
+@media (max-width: 820px) {
+  .emit-entete,
+  .emit-contenu-page {
+    padding-left: var(--espace-md);
+    padding-right: var(--espace-md);
+  }
+}
+
+/* =========================================================
+   MOBILE — largeur <= 680px
+   ========================================================= */
+@media (max-width: 680px) {
+  .emit-connexion-page {
+    padding: var(--espace-md);
+  }
+
+  .emit-connexion-conteneur {
+    flex-direction: column;
+    max-width: 460px;
+  }
+
+  .emit-connexion-panneau,
+  .emit-connexion-formulaire {
+    padding: var(--espace-lg);
+  }
+
+  .emit-connexion-panneau h1 {
+    font-size: 22px !important;
+  }
+
+  .emit-grille-infos {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .emit-entete {
+    padding: 16px var(--espace-md);
+    text-align: left;
+  }
+
+  .emit-entete > span {
+    font-size: 17px !important;
+  }
+
+  .emit-contenu-page {
+    padding: var(--espace-lg) var(--espace-md);
+  }
+
+  .emit-formulaire-referentiel {
+    flex-direction: column;
+  }
+
+  .emit-formulaire-referentiel > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .emit-formulaire-referentiel .emit-bouton-ajouter {
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  .emit-formulaire-referentiel .emit-bouton-ajouter button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   TRÈS PETIT MOBILE — largeur <= 380px
+   ========================================================= */
+@media (max-width: 380px) {
+  .emit-connexion-panneau,
+  .emit-connexion-formulaire {
+    padding: var(--espace-md);
+  }
+}

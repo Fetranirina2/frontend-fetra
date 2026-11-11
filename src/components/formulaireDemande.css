@@ -1,0 +1,120 @@
+.fiche-demande {
+  min-height: 85vh;
+  background: #f5f9ff;
+  color: #102947;
+  padding: 16px clamp(12px, 4vw, 40px) 56px;
+}
+.fiche-contenu {
+  max-width: 680px;
+  margin: auto;
+}
+.fiche-retour {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  color: #334e70;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.fiche-contenu header {
+  padding: 12px 0 24px;
+}
+.fiche-contenu h1 {
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: #102947;
+}
+.fiche-contenu header p {
+  margin-top: 8px;
+  color: #465c74;
+  line-height: 1.5;
+}
+.fiche-contenu form {
+  padding: clamp(16px, 4vw, 32px);
+  background: white;
+  border: 1px solid #dbe5ef;
+  border-radius: 16px;
+  display: grid;
+  gap: 20px;
+}
+.fiche-contenu form > *,
+.fiche-contenu fieldset {
+  min-width: 0;
+}
+.fiche-contenu
+  :is(input:not([type='radio'], [type='checkbox']), select, textarea) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  border: 1px solid #b7c6d7;
+  border-radius: 8px;
+  background: #fff;
+  color: #162f49;
+  padding: 10px 12px;
+  font-size: 1rem;
+  box-shadow: none;
+}
+.fiche-contenu textarea {
+  min-height: 100px;
+}
+.fiche-contenu :is(input, textarea, select, button):focus-visible {
+  outline: 2px solid #2358bc;
+  outline-offset: 2px;
+}
+.fiche-contenu label:has(input[type='radio']),
+.fiche-contenu label:has(input[type='checkbox']) {
+  min-height: 44px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #dbe5ef;
+}
+.fiche-contenu label:has(input:checked) {
+  background: #eff6ff;
+  border-color: #3566b6;
+}
+.fiche-contenu button[type='submit'] {
+  background: #174bb7;
+  color: white;
+  border-radius: 9px;
+  min-height: 46px;
+  font-weight: 600;
+}
+.fiche-identite {
+  display: grid;
+  gap: 14px;
+}
+.fiche-identite label,
+.fiche-select {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.fiche-identite legend {
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.fiche-identite small {
+  color: #ac2336;
+}
+@media (max-width: 600px) {
+  .fiche-contenu button[type='submit'] {
+    width: 100%;
+  }
+  .fiche-contenu .max-w-xs {
+    max-width: none;
+  }
+}
+.fiche-tarif {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #163760;
+}
